@@ -1,0 +1,58 @@
+//! JavaScript Program To Perform Intersection Between Two Arrays
+
+//! Example 1: Perform Intersection Using Set
+// intersection contains the elements of array1 that are also in array2
+
+function performIntersection(arr1, arr2) {
+  // converting into Set
+  const setA = new Set(arr1);
+  const setB = new Set(arr2);
+
+  let intersectionResult = [];
+
+  for (let i of setB) {
+    if (setA.has(i)) {
+      intersectionResult.push(i);
+    }
+  }
+
+  return intersectionResult;
+}
+
+const array1 = [1, 2, 3, 5, 9];
+const array2 = [1, 3, 5, 8];
+
+const result = performIntersection(array1, array2);
+console.log(result);        //Output: [1, 3, 5]
+
+//! --------------------- @TAZHEEB_SHAMSI ----------------------
+
+//! Example 2: Perform Intersection Using filter() Method
+
+function performIntersection(arr1, arr2) {
+  const intersectionResult = arr1.filter((x) => arr2.indexOf(x) !== -1);
+
+  return intersectionResult;
+}
+
+const Array1 = [1, 2, 3, 5, 9];
+const Array2 = [1, 3, 5, 8];
+
+const Result = performIntersection(Array1, Array2);
+console.log(Result);        //Output: [1, 3, 5]
+
+//! --------------------- @TAZHEEB_SHAMSI ----------------------
+
+//! Example 3: Perform Intersection Using filter() & includes() Method
+
+function performIntersection(arr1, arr2) {
+  const intersectionResult = arr1.filter((x) => arr2.indexOf(x) !== -1);
+
+  return intersectionResult;
+}
+
+const arraY1 = [1, 2, 3, 5, 9];
+const arraY2 = [1, 3, 5, 8];
+
+const resulT = performIntersection(arraY1, arraY2);
+console.log(Result);        //Output: [1, 3, 5]
